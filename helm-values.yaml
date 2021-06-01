@@ -1,0 +1,11 @@
+replicaCount: 1
+mysql:
+  name: hades-db
+  group: db
+  container:
+    image: sudhanshubanerjee/osx:hades_db
+    port: 3306
+  service:
+    type: NodePort
+    port: 3306
+    externalPort: 30001
